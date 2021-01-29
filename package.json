@@ -1,7 +1,7 @@
 {
   "name": "@liqd-js/alg-object-merge",
   "description": "Object Merge Algorithm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "radixxko",
   "license": "MIT",
   "main": "lib/merge.js",
