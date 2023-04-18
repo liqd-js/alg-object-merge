@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function ObjectMerge( obj, ...patches )
+function merge( obj: any, ...patches: any[] ): any
 {
     for( let data of patches )
     {
@@ -23,7 +23,7 @@ module.exports = function ObjectMerge( obj, ...patches )
                 !Array.isArray( obj[key] ) && !Array.isArray( data[key] )
             )
             {
-                ObjectMerge( obj[key], data[key] );
+                merge( obj[key], data[key] );
             }
             else
             {
@@ -33,4 +33,9 @@ module.exports = function ObjectMerge( obj, ...patches )
     }
 
     return obj;
+}
+
+export default function ObjectMerge<T>( obj: Partial<T>, ...patches: Partial<T>[] ): T
+{
+    return merge( obj, ...patches ) as T;
 }
