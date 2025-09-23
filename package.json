@@ -1,7 +1,7 @@
 {
   "name": "@liqd-js/alg-object-merge",
   "description": "Object Merge Algorithm",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "author": "radixxko",
   "license": "MIT",
   "main": "dist/merge.js",
@@ -30,6 +30,9 @@
     "coveralls": "^3.0.4",
     "mocha": "^5.0.4",
     "nyc": "^14.1.1",
-    "typescript": "^4.9.5"
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@liqd-js/clone": "^2.0.4"
   }
 }

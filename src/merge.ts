@@ -1,5 +1,7 @@
 'use strict';
 
+import clone from '@liqd-js/clone';
+
 function merge( obj: any, ...patches: any[] ): any
 {
     for( let data of patches )
@@ -27,7 +29,7 @@ function merge( obj: any, ...patches: any[] ): any
             }
             else
             {
-                obj[key] = data[key];
+                obj[key] = clone( data[key] );
             }
         }
     }
